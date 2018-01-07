@@ -35,7 +35,7 @@ for($i = 0; $i < gridHeight; $i++) {
 echo "\n\n";
 //Choosing n random points on the grid
 $flag = 0;
-for($i = 0; $i < 6; $i++) {
+for($i = 0; $i < $n; $i++) {
 	while($flag != 1) {
 		$x = rand(0,gridWeight-1);
 		$y = rand(0,gridHeight-1);
@@ -70,7 +70,7 @@ for($i = 0; $i < gridHeight; $i++) {
 echo "\n";
 
 //displaying those n points
-for($i = 0; $i < 6; $i++) {
+for($i = 0; $i < $n; $i++) {
 	echo $points[$i][0];
 	echo "  ";
 	echo $points[$i][1];
@@ -85,7 +85,7 @@ for($k = 0; $k < $n-1; $k++) {
 	$x = $points[$k+1][0] - $points[$k][0];
 	$y = $points[$k+1][1] - $points[$k][1];
 		
-	//Horizontal movement
+	//Vertical movement
 	if($x > 0) {
 		for($i = 0; $i < $x; $i++) {
 			echo "down ";
@@ -97,7 +97,7 @@ for($k = 0; $k < $n-1; $k++) {
 		}
 	}
 
-	//vertical movement
+	//Horizontal movement
 	if($y > 0) {
 		for($i = 0; $i < $y; $i++) {
 			echo "right ";
